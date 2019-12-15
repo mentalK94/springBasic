@@ -3,12 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="getSum" class="di.ex1.GetSum"/>
-    <bean id="myGetSum" class="di.ex1.MyGetSum">
-        <property name="getSum">
-            <ref bean="getSum"/>
-        </property>
-        <property name="a" value="1200"/>
-        <property name="b" value="2300"/>
+    <bean id = "examDao" class="di.ex2.ExamDAO">
+        <constructor-arg value="hello spring"/>
     </bean>
 </beans>
