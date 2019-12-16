@@ -3,4 +3,44 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="player1" class="di.ex6.Player">
+        <constructor-arg value="박병호"/>
+        <constructor-arg value="32"/>
+        <constructor-arg>
+            <list>
+                <value>4번</value>
+                <value>1루수</value>
+            </list>
+        </constructor-arg>
+
+        <property name="height" value="188.5"/>
+        <property name="weight" value="100"/>
+    </bean>
+
+    <bean id="player2" class="di.ex6.Player">
+        <constructor-arg value="김현수"/>
+        <constructor-arg value="30"/>
+        <constructor-arg>
+            <list>
+                <value>3번</value>
+                <value>좌익수</value>
+            </list>
+        </constructor-arg>
+
+        <property name="height" value="188.2"/>
+        <property name="weight" value="96"/>
+    </bean>
+
+    <bean id="playerInfo1" class="di.ex6.PlayerInfo">
+        <property name="player"><ref bean="player2"/></property>
+    </bean>
+
+    <bean id="baseballTeam" class="di.ex6.BaseballTeam">
+        <constructor-arg value="LG Twins"/>
+        <constructor-arg value="류중일"/>
+        <constructor-arg value="이병규"/>
+        <constructor-arg value="최일언"/>
+        <property name="hitter" value="김현수"/>
+        <property name="pitcher" value="차우찬"/>
+    </bean>
 </beans>

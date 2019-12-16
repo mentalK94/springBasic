@@ -1,4 +1,4 @@
-package di.ex6;
+package di.ex7;
 
 import java.util.ArrayList;
 
