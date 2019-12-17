@@ -35,7 +35,7 @@
 
 >> setBeanName(String arg) : 객체가 생성될 때 해당 객체의 id나 name값을 전달 받는 메소드
 
-### 외부 파일을 이용한 빈 설정
+### 외부 파일을 이용한 빈 설정(순서 매우중요!)
 - EnvironmentAware 인터페이스 활용하여 Environment객체 
 >> Context --> getEnvironment() : Environment 객체 얻기
 >> Environment --> getPropertySources 객체 얻기
