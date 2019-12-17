@@ -29,3 +29,10 @@
 
 > @PreDestroy
 > public void destroyMethod() {} // 종료시 설정
+
+### 빈의 범위(Bean Scope)
+- singleone(default값) : 스프링 컨테이너에 의해 한개의 빈 객체만 생성
+- prototype : 빈 사용시(getBean 등등)마다 생성
+- request : HTTP 요청 마다 빈 객체를 생성(WebAppContext에서만 적용)
+- session : HTTP 세션 마다 빈 객체를 생성(WebAppContext에서만 적용)
+- global-session : global HTTP 세션에 대해 빈 객체를 생성
