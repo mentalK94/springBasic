@@ -40,3 +40,7 @@
 >> Context --> getEnvironment() : Environment 객체 얻기
 >> Environment --> getPropertySources 객체 얻기
 >> PropertySources --> 프로퍼티를 추가하거나(addLast), 추출(getProperty)작업을 한다.
+
+- XML파일에 외부프로퍼티 파일을 명시하는 방법
+
+- Java파일에 외부프로퍼티 파일을 명시하는 방법
