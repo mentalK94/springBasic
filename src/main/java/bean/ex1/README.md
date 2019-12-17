@@ -30,7 +30,7 @@
 - destroy-method : 커스텀 소멸 메소드를 지정하는 <bean>태그의 속성
 - BeanNameAware Interface
 >> 빈 객체가 자기자신의 이름을 알아야 할 경우 사용된다.
->
+
 >> 클래스가 BeanNameAware 인터페이스를 구현한 경우 컨테이너는 setBeanName()메소드를 호출해서 빈 객체의 이름을 전달한다.
 
 >> setBeanName(String arg) : 객체가 생성될 때 해당 객체의 id나 name값을 전달 받는 메소드
