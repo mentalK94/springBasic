@@ -34,3 +34,9 @@
 >> 클래스가 BeanNameAware 인터페이스를 구현한 경우 컨테이너는 setBeanName()메소드를 호출해서 빈 객체의 이름을 전달한다.
 
 >> setBeanName(String arg) : 객체가 생성될 때 해당 객체의 id나 name값을 전달 받는 메소드
+
+### 외부 파일을 이용한 빈 설정
+- Environment 인터페이스 활용
+>> Context --> getEnvironment() : Environment 객체 얻기
+>> Environment --> getPropertySources 객체 얻기
+>> PropertySources --> 프로퍼티를 추가하거나(addLast), 추출(getProperty)작업을 한다.
