@@ -3,8 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="person" class="bean.ex1.Person" scope="prototype">
-        <constructor-arg value="김한솔"/>
-        <constructor-arg value="26"/>
-    </bean>
+    <!-- 빈 객체 생성시에 커스텀 초기화 및 소멸 메소드 지정 -->
+    <bean id="lifeBean2" class="bean.ex2.LifeBeanImpl" init-method="init" destroy-method="destroy"/>
+
 </beans>

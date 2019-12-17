@@ -12,27 +12,3 @@
 - @Bean : Bean 생성 및 스프링 컨테이너가 관리, 메소드 앞에 선언
  
 ### Java와 XML 혼용사용한 설정방법
-
-### Bean의 생명주기(Life Cycle)
-
-- ctx.refresh 과정에서 Bean이 생성
-- ctx.close() 컨테이너가 소멸하는 단계에서 Bean도 자동으로 소멸
-
-- InitializingBean Interface
-  -> public void afterPropertiesSet() throws Exception
-- DisposableBean Interface
-  -> public void destroy() throws Exception  
-  
-- 어노테이션 활용
-> @PostConstruct
-> public void initMethod() {}  // 초기화시 설정
-
-> @PreDestroy
-> public void destroyMethod() {} // 종료시 설정
-
-### 빈의 범위(Bean Scope)
-- singleone(default값) : 스프링 컨테이너에 의해 한개의 빈 객체만 생성
-- prototype : 빈 사용시(getBean 등등)마다 생성
-- request : HTTP 요청 마다 빈 객체를 생성(WebAppContext에서만 적용)
-- session : HTTP 세션 마다 빈 객체를 생성(WebAppContext에서만 적용)
-- global-session : global HTTP 세션에 대해 빈 객체를 생성
